@@ -1,15 +1,16 @@
 {
   "name": "cursor-flashlight",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tiny lib to add flashlight effect to your website 🔦",
   "source": "src/index.ts",
   "main": "public/dist/index.js",
   "exports": "./public/dist/index.modern.js",
   "module": "public/dist/index.module.js",
+  "types": "public/dist/index.d.ts",
   "scripts": {
     "dev": "npm-run-parallel watch serve",
-    "build": "microbundle --sourcemap false --jsx React.createElement",
-    "watch": "microbundle watch --sourcemap false --jsx React.createElement",
+    "build": "microbundle --sourcemap",
+    "watch": "microbundle watch --sourcemap",
     "serve": "live-server ./public"
   },
   "keywords": [],
