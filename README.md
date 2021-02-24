@@ -3,6 +3,8 @@
 
 A tiny library to add flashlight effect to your website 🔦
 
+[Try it on CodeSandbox](https://codesandbox.io/s/cursor-flashlight-demo-w8o5t?file=/src/App.js)
+
 ## Usage
 
 Simply import the module and enable the flashlight with the size of the flashlight circle.

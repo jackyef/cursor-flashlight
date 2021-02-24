@@ -11,7 +11,8 @@
     "dev": "npm-run-parallel watch serve",
     "build": "microbundle --sourcemap",
     "watch": "microbundle watch --sourcemap",
-    "serve": "live-server ./public"
+    "serve": "live-server ./public",
+    "prepack": "npm run build"
   },
   "keywords": [],
   "author": "Jacky Efendi",
