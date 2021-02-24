@@ -7,6 +7,9 @@ A tiny library to add flashlight effect to your website 🔦
 
 ![demo](assets/demo.gif)
 
+> Note:
+> The effect won't show on devices without mouse (e.g.: smartphones)
+
 ## Usage
 
 Simply import the module and enable the flashlight with the size of the flashlight circle.

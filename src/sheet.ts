@@ -8,6 +8,7 @@ let ruleIndices: number[] = [];
 export const insertNeededRules = ({ size }: { size: string }) => {
   ruleIndices.push(
     sheet.insertRule(css`
+    @media (hover: hover) {
       :root {
         --flashlightCursorX: 50vw;
         --flashlightCursorY: 50vh;
@@ -17,11 +18,13 @@ export const insertNeededRules = ({ size }: { size: string }) => {
           rgba(0,0,0,.5) 80%,
           rgba(0,0,0,.75) 100%
         );
-      }`),
+      }
+    }`),
   );
 
   ruleIndices.push(
     sheet.insertRule(css`
+    @media (hover: hover) {
       :root:before {
         content: '';
         display: block;
@@ -30,6 +33,7 @@ export const insertNeededRules = ({ size }: { size: string }) => {
         position: fixed;
         pointer-events: none;
         background: var(--flashlightBg);
+      }
     }`),
   );
 };
