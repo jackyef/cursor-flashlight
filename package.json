@@ -27,6 +27,7 @@
     "eslint-plugin-react-hooks": "^2.3.0",
     "live-server": "^1.2.1",
     "microbundle": "^0.13.0",
+    "minify-css.macro": "^1.0.10",
     "npm-run-parallel": "^0.6.0",
     "prettier": "^2.2.1",
     "react": "^17.0.1",

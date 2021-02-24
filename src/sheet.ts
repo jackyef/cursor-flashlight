@@ -1,3 +1,5 @@
+import css from 'minify-css.macro';
+
 const sheet = document.head.appendChild(document.createElement('style'))
   .sheet as CSSStyleSheet;
 
@@ -5,7 +7,7 @@ let ruleIndices: number[] = [];
 
 export const insertNeededRules = ({ size }: { size: string }) => {
   ruleIndices.push(
-    sheet.insertRule(`
+    sheet.insertRule(css`
       :root {
         --flashlightCursorX: 50vw;
         --flashlightCursorY: 50vh;
@@ -19,7 +21,7 @@ export const insertNeededRules = ({ size }: { size: string }) => {
   );
 
   ruleIndices.push(
-    sheet.insertRule(`
+    sheet.insertRule(css`
       :root:before {
         content: '';
         display: block;
