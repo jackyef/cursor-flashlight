@@ -29,7 +29,7 @@
   },
   "exclude": [
     "node_modules",
-    "dist"
+    "public"
   ],
   "include": [
     "types/*.d.ts",

@@ -1,6 +1,6 @@
 <html>
   <head>
-    <script type="module" src="/dist/index.module.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <style>
       .go535865098 {
         text-align: center;
@@ -17,14 +17,6 @@
         color: white;
         min-height: 80vh;
       }
-      @keyframes App-logo-spin {
-        from {
-          transform: scale(1);
-        }
-        to {
-          transform: scale(1.06);
-        }
-      }
       .go3478825717 {
         width: 80%;
       }
@@ -38,10 +30,30 @@
         margin: 2rem auto;
         text-align: center;
       }
+
+      #toggleButton {
+        margin-top: 2rem;
+        border-radius: 8px;
+        background: #225599;
+        color: white;
+        border: none;
+        font-size: 1.1rem;
+        padding: 1rem;
+        transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      #toggleButton:hover {
+        background: #229b7d;
+        transform: translateY(-0.5rem);
+        box-shadow: 0px 11px 16px 0px rgba(0,0,0,0.75);
+      }
+
       @media only screen and (max-width: 600px) {
-        .go3079381657 pre {
-          padding: 1.25rem;
+        .go3079381657 {
+          padding: 1rem;
           width: auto;
+          font-size: 0.9rem;
+          margin: 0;
         }
       }
 
@@ -66,9 +78,28 @@
         <div class="go3478825717">
           <pre
             class="go3079381657"
-          ><code>$ npm install cursor-flashlight</code></pre>
+          ><code>$ yarn add cursor-flashlight</code></pre>
         </div>
+
+        <button id="toggleButton">Disable flashlight</button>
       </main>
     </div>
+    <script type="module">
+      import { enable, disable, isEnabled } from '/dist/index.module.js';
+
+      const toggleButton = document.getElementById('toggleButton')
+
+      toggleButton.addEventListener('click', () => {
+        if (isEnabled()) {
+          disable()
+          toggleButton.innerText = 'Enable flashlight'
+        } else {
+          enable({ size: '15vmax '})
+          toggleButton.innerText = 'Disable flashlight'
+        }
+      })
+
+      enable({ size: '15vmax' });
+    </script>
   </body>
 </html>

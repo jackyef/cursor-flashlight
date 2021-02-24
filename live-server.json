@@ -1,0 +1,10 @@
+{
+  "port": 8080,
+  "host": "0.0.0.0",
+  "root": "/public",
+  "open": true,
+  "ignore": "*d.ts,*.js.map,*.umd*,*.modern*",
+  "file": "index.html",
+  "wait": 100,
+  "logLevel": 2
+}
